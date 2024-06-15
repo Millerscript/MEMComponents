@@ -16,7 +16,7 @@ class TabViewExampleViewController: MEMBaseViewController {
     let tabView = MCTabView(scrollDirection: .HORIZONTAL)
     
     var lblTitle: UILabel = {
-        let label = UILabel().newSet()
+        let label = UILabel.newSet()
         label.textColor = .black
         label.numberOfLines = 0
         label.textAlignment = .center

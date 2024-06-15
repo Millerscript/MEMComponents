@@ -8,21 +8,23 @@
 
 import Foundation
 import UIKit
+import MEMBase
 
 class HeaderViewCell: UIView {
     
-    let titleLbl: UILabel = {
-        let label = UILabel(frame: .zero)
-        label.text = "MEMComponents App"
+    let fontManager = MEMComponentFontStylesManager()
+    
+    lazy var titleLbl: UILabel = {
+        let label = UILabel.newSet()
+        label.text = ""
         label.textColor = .black
-        label.font = UIFont(name: "Poppins-Light", size: 28.0)
+        label.font = fontManager.bold(size: MEMBaseFontSizes.titleS)
         label.numberOfLines = 1
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .clear
@@ -36,11 +38,10 @@ class HeaderViewCell: UIView {
     private func setTitle() {
         self.addSubview(titleLbl)
         
-        NSLayoutConstraint.activate([
-            titleLbl.topAnchor.constraint(equalTo: self.topAnchor),
-            titleLbl.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            titleLbl.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            titleLbl.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-        ])
+        titleLbl.hookingToParentView()
+    }
+    
+    public func setTitle(text: String) {
+        titleLbl.text = text
     }
 }

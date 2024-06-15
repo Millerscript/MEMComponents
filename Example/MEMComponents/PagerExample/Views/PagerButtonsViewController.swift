@@ -44,7 +44,7 @@ class PagerButtonsViewController: MEMBaseViewController {
         pageViewController = MCPageArrowControl(transitionStyle: .scroll, navigationOrientation: .horizontal)
         //pageViewController?.pageDelegate = self
         pageViewController?.pages.append(contentsOf: pages)
-        pageViewController?.view.newSet()
+        pageViewController?.view.prepareForHooks()
 
         addChild(pageViewController!)
         self.view.addSubview(pageViewController!.view)

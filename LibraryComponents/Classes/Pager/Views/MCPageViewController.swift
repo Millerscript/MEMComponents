@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import MEMBase
 
-public protocol MCPageDelegate {
+public protocol MCPageDelegate: AnyObject {
     func move(index: Int)
 }
 

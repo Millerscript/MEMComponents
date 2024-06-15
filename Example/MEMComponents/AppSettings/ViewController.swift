@@ -9,17 +9,23 @@
 import UIKit
 import MEMBase
 import MEMComponents
+import Combine
 
 class ViewController: MEMBaseViewController {
     
     struct Constants {
         static let cellIdentifier = "DeeplinkCell"
-        static let headerHeight = 100.0
+        static let headerHeight = 40.0
         static let cellHeight = 50.0
     }
     
-    let tableView = UITableView(frame: .zero)
+    let tableView: UITableView = .newSet()
     var model: [DeeplinkModel] = []
+    
+    var viewModel = ExamplesViewModel()
+    var cancellable: [AnyCancellable] = []
+    
+    var mockExampleModel: MockExample?
     
     required init(data: [String : Any]) {
         super.init(data: data)
@@ -32,13 +38,14 @@ class ViewController: MEMBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        
+       
         setTableView()
-        setModel()
-
+ 
         hideNavigationBar()
         self.hideNavigationBar()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        subscription()
+        fetchData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,28 +60,33 @@ class ViewController: MEMBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func setTableView() {
-       tableView.delegate = self
-       tableView.dataSource = self
-       tableView.separatorStyle = .none
-       tableView.register(DeeplinkCell.self, forCellReuseIdentifier: Constants.cellIdentifier)
-       tableView.translatesAutoresizingMaskIntoConstraints = false
-       
-       self.view.addSubview(tableView)
-       
-       NSLayoutConstraint.activate([
-           tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-           tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-           tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-           tableView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
-       ])
+    func fetchData() {
+        Task(priority: .background) {
+            await viewModel.readJSONFile(forName: "MockExample")
+        }
     }
-
-    func setModel() {
-       model.append(DeeplinkModel(title: "TabView Example", deeplink: "memcomponents://example/tabView"))
-       model.append(DeeplinkModel(title: "Pager(index) Example", deeplink: "memcomponents://example/pager/index"))
-       model.append(DeeplinkModel(title: "Pager(buttons) Example", deeplink: "memcomponents://example/pager/buttons"))
-       model.append(DeeplinkModel(title: "Pager(gesture) Example", deeplink: "memcomponents://example/pager/gesture"))
+    
+    func subscription() {
+        viewModel.examples.sink { error in
+            print(error)
+        } receiveValue: { data in
+            self.mockExampleModel = data
+            self.tableView.reloadData()
+        }.store(in: &cancellable)
+    }
+    
+    func setTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.register(DeeplinkCell.self, forCellReuseIdentifier: Constants.cellIdentifier)
+        
+        self.view.addSubview(tableView)
+        
+        tableView.hookSafeArea(.top, to: .top, of: self.view)
+        tableView.hookSafeArea(.bottom, to: .bottom, of: self.view)
+        tableView.hook(.left, to: .left, of: self.view, valueInset: 20)
+        tableView.hook(.right, to: .right, of: self.view, valueInset: -20)
     }
 
 }
@@ -82,11 +94,12 @@ class ViewController: MEMBaseViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return self.mockExampleModel?.sections.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.count
+        
+        return self.mockExampleModel?.sections[section].examples.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -94,7 +107,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let data = model[indexPath.row]
+        guard let data = self.mockExampleModel?.sections[indexPath.section].examples[indexPath.row] else { return UITableViewCell() }
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier) as? DeeplinkCell else {return UITableViewCell()}
         
@@ -104,7 +117,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return HeaderViewCell(frame: .zero)
+        let header = HeaderViewCell(frame: .zero)
+        let title = self.mockExampleModel?.sections[section].title
+        header.setTitle(text: title ?? "")
+        return header
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -112,9 +128,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let deeplink = model[indexPath.row]
-        self.open(deeplink: deeplink.deeplink)
+        guard let data = self.mockExampleModel?.sections[indexPath.section].examples[indexPath.row] else { return }
+
+        self.open(deeplink: data.deeplink)
     }
     
 }
-

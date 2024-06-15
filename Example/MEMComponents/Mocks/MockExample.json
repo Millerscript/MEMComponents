@@ -1,0 +1,26 @@
+{
+    "sections": [
+        { "title": "TabView",
+            "examples": [
+                { "title":"TabView Example", "deeplink":"memcomponents://example/tabView" },
+                { "title":"TabView and Pager", "deeplink":"memcomponents://example/tabViewpager" }
+            ]
+        },
+        { "title": "Pager",
+            "examples": [
+                { "title":"Pager(index)", "deeplink":"memcomponents://example/pager/index" },
+                { "title":"Pager(buttons)", "deeplink":"memcomponents://example/pager/buttons" },
+                { "title":"Pager(gesture)", "deeplink":"memcomponents://example/pager/gesture" }
+            ]
+        },
+        {
+            "title": "Stories",
+            "examples": [
+                { "title":"Progress Bars (Only)", "deeplink":"memcomponents://example/status/bars" },
+                { "title":"Status Screen (Only)", "deeplink":"memcomponents://example/status/screen" },
+                { "title":"Status Screen and bars", "deeplink":"memcomponents://example/status/screenbars" },
+                { "title":"Status Screen and bars {Builder}", "deeplink":"memcomponents://example/status/screenbarsbuilder" }
+            ]
+        }
+    ]
+}

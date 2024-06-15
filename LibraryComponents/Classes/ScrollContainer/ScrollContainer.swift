@@ -25,7 +25,7 @@ open class ScrollContainer {
     }
     
     private let itemsContainer: UIStackView = {
-        let stackView = UIStackView().newSet()
+        let stackView = UIStackView.newSet()
         stackView.axis = .horizontal
         stackView.distribution = .fill
         stackView.alignment = .fill
@@ -36,13 +36,13 @@ open class ScrollContainer {
     }()
     
     private let sampleView: UIView = {
-        let view = UIView().newSet()
+        let view = UIView.newSet()
         view.backgroundColor = .brown
         return view
     }()
     
     public lazy var scrollView: UIScrollView = {
-        let scrollView = UIScrollView().newSet()
+        let scrollView = UIScrollView.newSet()
         scrollView.isScrollEnabled = true
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false

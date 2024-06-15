@@ -11,7 +11,7 @@ import MEMBase
 public class BasePageViewController: UIPageViewController {
     public var pages: [MEMBaseViewController] = []
     public var currentIndex: Int = 0
-    public var pageDelegate: MCPageDelegate?
+    public weak var pageDelegate: MCPageDelegate?
     typealias direction = UIPageViewController.NavigationDirection
     
     private var minIndex = 0
@@ -36,14 +36,12 @@ public class BasePageViewController: UIPageViewController {
         }
     }
     
-    
     public func validateIndex(index: Int) -> Bool {
 
         if index < minIndex || index > maxIndex { return false }
         
         return true
     }
-    
     
     public func moveControl(index: Int, direction: UIPageViewController.NavigationDirection) {
         if validateIndex(index: index) {
@@ -52,7 +50,13 @@ public class BasePageViewController: UIPageViewController {
         }
     }
     
-    public func bind(to parent: UIView, topView: UIView? = nil) {
+    public func moveControl(viewController: MEMBaseViewController, direction: UIPageViewController.NavigationDirection) {
+        self.setViewControllers([viewController], direction: direction, animated: true, completion: nil)
+        self.didMove(toParent: self)
+    }
+    
+    
+    public func bind(to parent: UIView, topView: UIView? = nil) {        
         self.view.hook(.left, to: .left, of: parent)
         self.view.hook(.right, to: .right, of: parent)
         

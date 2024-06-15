@@ -14,7 +14,7 @@ import MEMComponents
 class ItemViewController: MEMBaseViewController {
     
     var lblTitle: UILabel = {
-        let label = UILabel().newSet()
+        let label = UILabel.newSet()
         label.textColor = .black
         label.numberOfLines = 0
         label.textAlignment = .center
@@ -23,13 +23,13 @@ class ItemViewController: MEMBaseViewController {
     }()
     
     var titleText: String = ""
-    
+    var index: Int = 0
     required init(data: [String : Any]) {
         super.init(data: data)
         print( (data["index"] as? Int)! )
         print("It has been loaded")
         print( (data["data"] as? String)! )
-        
+        index = (data["index"] as? Int)!
         titleText = (data["data"] as? String)!
     }
     
@@ -47,7 +47,7 @@ class ItemViewController: MEMBaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        print("Loaded")
+        print("Loaded \(index)")
     }
     
     private func setTitle() {

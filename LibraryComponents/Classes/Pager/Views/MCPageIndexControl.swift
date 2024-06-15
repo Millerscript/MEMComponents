@@ -10,7 +10,6 @@ import MEMBase
 
 public class MCPageIndexControl: BasePageViewController {
 
-    
     public override func viewDidLoad() {
         super.viewDidLoad()
         setup()

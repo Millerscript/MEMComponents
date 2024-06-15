@@ -8,16 +8,18 @@
 
 import Foundation
 import UIKit
+import MEMBase
 
 class DeeplinkCell: UITableViewCell {
     
-    let titleLbl: UILabel = {
-        let label = UILabel(frame: .zero)
+    let fontManager = MEMComponentFontStylesManager()
+    
+    lazy var titleLbl: UILabel = {
+        let label = UILabel.newSet()
         label.textColor = .darkGray
-        label.font = UIFont(name: "Poppins-Light", size: 24.0)
+        label.font =  fontManager.light(size: MEMBaseFontSizes.bodyM)
         label.numberOfLines = 1
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .left
         return label
     }()
 
@@ -36,15 +38,13 @@ class DeeplinkCell: UITableViewCell {
         self.selectionStyle = .none
         contentView.addSubview(titleLbl)
         
-        NSLayoutConstraint.activate([
-            titleLbl.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            titleLbl.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            titleLbl.topAnchor.constraint(equalTo: contentView.topAnchor),
-            titleLbl.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-        ])
+        titleLbl.hook(.left, to: .left, of: contentView, valueInset: 10)
+        titleLbl.hook(.right, to: .right, of: contentView, valueInset: -10)
+        titleLbl.hook(.top, to: .top, of: contentView)
+        titleLbl.hook(.bottom, to: .bottom, of: contentView)
     }
     
-    func set(data: DeeplinkModel) {
+    func set(data: SectionExample) {
         titleLbl.text = data.title
     }
     

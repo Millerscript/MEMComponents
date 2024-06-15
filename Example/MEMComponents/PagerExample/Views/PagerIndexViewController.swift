@@ -21,7 +21,7 @@ class PagerIndexViewController: MEMBaseViewController {
     }
 
     private let inputIndex: UITextField = {
-        let input = UITextField().newSet()
+        let input = UITextField.newSet()
         input.placeholder = "Index..."
         input.textColor = .black
         input.backgroundColor = .darkGray.withAlphaComponent(0.4)
@@ -29,7 +29,7 @@ class PagerIndexViewController: MEMBaseViewController {
     }()
     
     private let btnForward: UIButton = {
-        let button = UIButton().newSet()
+        let button = UIButton.newSet()
         button.setTitle("Go to index", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .gray.withAlphaComponent(0.3)
@@ -64,7 +64,7 @@ class PagerIndexViewController: MEMBaseViewController {
         pageViewController = MCPageIndexControl(transitionStyle: .scroll, navigationOrientation: .horizontal)
         pageViewController?.pageDelegate = self
         pageViewController?.pages.append(contentsOf: pages)
-        pageViewController?.view.newSet()
+        pageViewController?.view.prepareForHooks()
 
         addChild(pageViewController!)
         self.view.addSubview(pageViewController!.view)

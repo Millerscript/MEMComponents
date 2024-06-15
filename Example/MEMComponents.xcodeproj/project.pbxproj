@@ -13,8 +13,24 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		E00FA66762C9DBECCD3343A2 /* Pods_MEMComponentsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE7C7AD13D76596093C6BEC /* Pods_MEMComponentsExample.framework */; };
+		E691D1C72C110DDB005CAF75 /* MEMComponentFontStylesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E691D1C62C110DDB005CAF75 /* MEMComponentFontStylesManager.swift */; };
+		E691D1CF2C110FD4005CAF75 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E691D1C92C110FD3005CAF75 /* Poppins-Italic.ttf */; };
+		E691D1D02C110FD4005CAF75 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E691D1CA2C110FD3005CAF75 /* Poppins-Bold.ttf */; };
+		E691D1D12C110FD4005CAF75 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E691D1CB2C110FD3005CAF75 /* Poppins-Regular.ttf */; };
+		E691D1D22C110FD4005CAF75 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E691D1CC2C110FD3005CAF75 /* Poppins-SemiBold.ttf */; };
+		E691D1D32C110FD4005CAF75 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E691D1CD2C110FD3005CAF75 /* Poppins-Medium.ttf */; };
+		E691D1D42C110FD4005CAF75 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E691D1CE2C110FD4005CAF75 /* Poppins-Thin.ttf */; };
+		E691D1D62C1114F7005CAF75 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E691D1D52C1114F7005CAF75 /* Poppins-Light.ttf */; };
+		E691D1E82C1BFEE0005CAF75 /* ExampleStoriesWithBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E691D1E72C1BFEDF005CAF75 /* ExampleStoriesWithBuilderViewController.swift */; };
 		E69454542BC3004200AEC9DF /* PagerButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69454532BC3004200AEC9DF /* PagerButtonsViewController.swift */; };
+		E694545B2BC8487900AEC9DF /* ExamplesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694545A2BC8487800AEC9DF /* ExamplesViewModel.swift */; };
+		E694545E2BC848F800AEC9DF /* MockExample.json in Resources */ = {isa = PBXBuildFile; fileRef = E694545D2BC848F800AEC9DF /* MockExample.json */; };
 		E695D0E32BB8DACC00895BEE /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E695D0E22BB8DACC00895BEE /* ItemViewController.swift */; };
+		E6AABE762BCA308700574CB7 /* TabViewPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AABE752BCA308700574CB7 /* TabViewPagerViewController.swift */; };
+		E6AABE802BCB105A00574CB7 /* ExampleStoriesProgressBarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AABE7F2BCB105A00574CB7 /* ExampleStoriesProgressBarsViewController.swift */; };
+		E6AABE8C2BF9AF7600574CB7 /* MCBarsContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AABE8B2BF9AF7600574CB7 /* MCBarsContainerTests.swift */; };
+		E6AABE922BFDDC2A00574CB7 /* ExampleStoriesDownloadContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AABE8D2BF9B3E000574CB7 /* ExampleStoriesDownloadContentViewController.swift */; };
+		E6AABE952C041C5200574CB7 /* ExampleStoriesScreenBarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AABE932C041C4100574CB7 /* ExampleStoriesScreenBarsViewController.swift */; };
 		E6ACB3DD2BB3425200F61062 /* PagerIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ACB3DC2BB3425200F61062 /* PagerIndexViewController.swift */; };
 		E6ACB3FA2BB52E0700F61062 /* TabViewExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ACB3F92BB52E0600F61062 /* TabViewExampleViewController.swift */; };
 		E6ACB3FE2BB5305200F61062 /* ExampleAppRouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6ACB3FD2BB5305200F61062 /* ExampleAppRouteHandler.swift */; };
@@ -53,8 +69,24 @@
 		BFE7C7AD13D76596093C6BEC /* Pods_MEMComponentsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MEMComponentsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E2B7188779FB72E8653E58 /* MEMComponents.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MEMComponents.podspec; path = ../MEMComponents.podspec; sourceTree = "<group>"; };
 		DA21652A092A6CC03E34CC73 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E691D1C62C110DDB005CAF75 /* MEMComponentFontStylesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEMComponentFontStylesManager.swift; sourceTree = "<group>"; };
+		E691D1C92C110FD3005CAF75 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		E691D1CA2C110FD3005CAF75 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		E691D1CB2C110FD3005CAF75 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		E691D1CC2C110FD3005CAF75 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		E691D1CD2C110FD3005CAF75 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		E691D1CE2C110FD4005CAF75 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		E691D1D52C1114F7005CAF75 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		E691D1E72C1BFEDF005CAF75 /* ExampleStoriesWithBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleStoriesWithBuilderViewController.swift; sourceTree = "<group>"; };
 		E69454532BC3004200AEC9DF /* PagerButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerButtonsViewController.swift; sourceTree = "<group>"; };
+		E694545A2BC8487800AEC9DF /* ExamplesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesViewModel.swift; sourceTree = "<group>"; };
+		E694545D2BC848F800AEC9DF /* MockExample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockExample.json; sourceTree = "<group>"; };
 		E695D0E22BB8DACC00895BEE /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		E6AABE752BCA308700574CB7 /* TabViewPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewPagerViewController.swift; sourceTree = "<group>"; };
+		E6AABE7F2BCB105A00574CB7 /* ExampleStoriesProgressBarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleStoriesProgressBarsViewController.swift; sourceTree = "<group>"; };
+		E6AABE8B2BF9AF7600574CB7 /* MCBarsContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCBarsContainerTests.swift; sourceTree = "<group>"; };
+		E6AABE8D2BF9B3E000574CB7 /* ExampleStoriesDownloadContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleStoriesDownloadContentViewController.swift; sourceTree = "<group>"; };
+		E6AABE932C041C4100574CB7 /* ExampleStoriesScreenBarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleStoriesScreenBarsViewController.swift; sourceTree = "<group>"; };
 		E6ACB3DC2BB3425200F61062 /* PagerIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerIndexViewController.swift; sourceTree = "<group>"; };
 		E6ACB3F92BB52E0600F61062 /* TabViewExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewExampleViewController.swift; sourceTree = "<group>"; };
 		E6ACB3FD2BB5305200F61062 /* ExampleAppRouteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAppRouteHandler.swift; sourceTree = "<group>"; };
@@ -116,10 +148,13 @@
 		607FACD21AFB9204008FA782 /* Example for MEMComponents */ = {
 			isa = PBXGroup;
 			children = (
+				E694545C2BC8488B00AEC9DF /* Mocks */,
 				E6ACB3FB2BB52E7500F61062 /* AppSettings */,
 				E6ACB3F82BB52DEB00F61062 /* TabViewExample */,
 				E6ACB3DA2BB341F400F61062 /* PagerExample */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				E69454582BC840C000AEC9DF /* TabViewPager */,
+				E6AABE7E2BCB104000574CB7 /* Stories */,
+				E69454592BC8486200AEC9DF /* ViewModel */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -139,6 +174,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E6AABE8A2BF9AF5C00574CB7 /* Status */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -172,6 +208,72 @@
 				04FB6227C5DDDFB6F164F8F5 /* Pods-MEMComponentsTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E691D1C52C110C06005CAF75 /* FontManager */ = {
+			isa = PBXGroup;
+			children = (
+				E691D1C82C110EDC005CAF75 /* Fonts */,
+				E691D1C62C110DDB005CAF75 /* MEMComponentFontStylesManager.swift */,
+			);
+			path = FontManager;
+			sourceTree = "<group>";
+		};
+		E691D1C82C110EDC005CAF75 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E691D1CA2C110FD3005CAF75 /* Poppins-Bold.ttf */,
+				E691D1D52C1114F7005CAF75 /* Poppins-Light.ttf */,
+				E691D1C92C110FD3005CAF75 /* Poppins-Italic.ttf */,
+				E691D1CD2C110FD3005CAF75 /* Poppins-Medium.ttf */,
+				E691D1CB2C110FD3005CAF75 /* Poppins-Regular.ttf */,
+				E691D1CC2C110FD3005CAF75 /* Poppins-SemiBold.ttf */,
+				E691D1CE2C110FD4005CAF75 /* Poppins-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E69454582BC840C000AEC9DF /* TabViewPager */ = {
+			isa = PBXGroup;
+			children = (
+				E6AABE752BCA308700574CB7 /* TabViewPagerViewController.swift */,
+			);
+			path = TabViewPager;
+			sourceTree = "<group>";
+		};
+		E69454592BC8486200AEC9DF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E694545A2BC8487800AEC9DF /* ExamplesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E694545C2BC8488B00AEC9DF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E694545D2BC848F800AEC9DF /* MockExample.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E6AABE7E2BCB104000574CB7 /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				E6AABE7F2BCB105A00574CB7 /* ExampleStoriesProgressBarsViewController.swift */,
+				E6AABE8D2BF9B3E000574CB7 /* ExampleStoriesDownloadContentViewController.swift */,
+				E6AABE932C041C4100574CB7 /* ExampleStoriesScreenBarsViewController.swift */,
+				E691D1E72C1BFEDF005CAF75 /* ExampleStoriesWithBuilderViewController.swift */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
+		E6AABE8A2BF9AF5C00574CB7 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				E6AABE8B2BF9AF7600574CB7 /* MCBarsContainerTests.swift */,
+			);
+			name = Status;
 			sourceTree = "<group>";
 		};
 		E6ACB3DA2BB341F400F61062 /* PagerExample */ = {
@@ -219,11 +321,13 @@
 		E6ACB3FB2BB52E7500F61062 /* AppSettings */ = {
 			isa = PBXGroup;
 			children = (
+				E691D1C52C110C06005CAF75 /* FontManager */,
 				E6ACB3FD2BB5305200F61062 /* ExampleAppRouteHandler.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				E6ACB3FF2BB5313100F61062 /* DeeplinkModel.swift */,
-				E6ACB4012BB5315300F61062 /* DeeplinkCell.swift */,
 				E6ACB4032BB531DE00F61062 /* HeaderViewCell.swift */,
+				E6ACB4012BB5315300F61062 /* DeeplinkCell.swift */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
 			);
 			path = AppSettings;
 			sourceTree = "<group>";
@@ -316,6 +420,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				E691D1D62C1114F7005CAF75 /* Poppins-Light.ttf in Resources */,
+				E691D1D22C110FD4005CAF75 /* Poppins-SemiBold.ttf in Resources */,
+				E694545E2BC848F800AEC9DF /* MockExample.json in Resources */,
+				E691D1D42C110FD4005CAF75 /* Poppins-Thin.ttf in Resources */,
+				E691D1D02C110FD4005CAF75 /* Poppins-Bold.ttf in Resources */,
+				E691D1D12C110FD4005CAF75 /* Poppins-Regular.ttf in Resources */,
+				E691D1D32C110FD4005CAF75 /* Poppins-Medium.ttf in Resources */,
+				E691D1CF2C110FD4005CAF75 /* Poppins-Italic.ttf in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,13 +517,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E694545B2BC8487900AEC9DF /* ExamplesViewModel.swift in Sources */,
 				E6ACB3DD2BB3425200F61062 /* PagerIndexViewController.swift in Sources */,
+				E691D1E82C1BFEE0005CAF75 /* ExampleStoriesWithBuilderViewController.swift in Sources */,
+				E6AABE762BCA308700574CB7 /* TabViewPagerViewController.swift in Sources */,
 				E6ACB4002BB5313100F61062 /* DeeplinkModel.swift in Sources */,
+				E6AABE952C041C5200574CB7 /* ExampleStoriesScreenBarsViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				E691D1C72C110DDB005CAF75 /* MEMComponentFontStylesManager.swift in Sources */,
 				E6ACB4042BB531DE00F61062 /* HeaderViewCell.swift in Sources */,
 				E6ACB4022BB5315300F61062 /* DeeplinkCell.swift in Sources */,
+				E6AABE922BFDDC2A00574CB7 /* ExampleStoriesDownloadContentViewController.swift in Sources */,
 				E6ACB3FE2BB5305200F61062 /* ExampleAppRouteHandler.swift in Sources */,
 				E69454542BC3004200AEC9DF /* PagerButtonsViewController.swift in Sources */,
+				E6AABE802BCB105A00574CB7 /* ExampleStoriesProgressBarsViewController.swift in Sources */,
 				E6ACB3FA2BB52E0700F61062 /* TabViewExampleViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				E695D0E32BB8DACC00895BEE /* ItemViewController.swift in Sources */,
@@ -423,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				E6AABE8C2BF9AF7600574CB7 /* MCBarsContainerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

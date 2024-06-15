@@ -10,8 +10,7 @@ import MEMBase
 
 public class MCPageArrowControl: BasePageViewController {
 
-    private var buttonsRegion: UIView = .init().newSet()
-
+    private var buttonsRegion: UIView = UIView.newSet()
     
     public override func viewDidLoad() {
         super.viewDidLoad()

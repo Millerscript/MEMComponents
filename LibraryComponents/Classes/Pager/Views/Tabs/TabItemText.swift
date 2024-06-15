@@ -27,8 +27,10 @@ class TabItemText: UIView, TabProtocol {
 
     required init(configuration: MCTabViewConfiguration) {
         self.configuration = configuration
-        tabItemTitle = TabItemTitle(type: .TEXT, configuration: configuration).newSet()
+        tabItemTitle = TabItemTitle(type: .TEXT, configuration: configuration)
         super.init(frame: CGRect())
+        
+        self.prepareForHooks()
         defaultSettings()
     }
     
@@ -37,7 +39,7 @@ class TabItemText: UIView, TabProtocol {
                                                     itemSelectedBackground: .gray.withAlphaComponent(0.3),
                                                     fontColor: .black,
                                                     fontSelectedColor: .white)
-        tabItemTitle = TabItemTitle(type: .TEXT, configuration: configuration).newSet()
+        tabItemTitle = TabItemTitle(type: .TEXT, configuration: configuration)
         super.init(frame: CGRect())
         defaultSettings()
     }

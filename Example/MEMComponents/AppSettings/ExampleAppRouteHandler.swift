@@ -14,9 +14,14 @@ class ExampleAppRouteHandler: MEMBaseRouteHandlerProtocol {
     var manager: MEMBaseDeeplinkManager = MEMBaseDeeplinkManager.shared
     
     func add() {
-        manager.register(endPoint: "tabView", viewController: TabViewExampleViewController.self)
-        manager.register(endPoint: "index", viewController: PagerIndexViewController.self)
-        manager.register(endPoint: "buttons", viewController: PagerButtonsViewController.self)
-        manager.register(endPoint: "gesture", viewController: PagerIndexViewController.self)
+        manager.register(endPoint: "/tabView", viewController: TabViewExampleViewController.self)
+        manager.register(endPoint: "/index", viewController: PagerIndexViewController.self)
+        manager.register(endPoint: "/buttons", viewController: PagerButtonsViewController.self)
+        manager.register(endPoint: "/gesture", viewController: PagerIndexViewController.self)
+        manager.register(endPoint: "/tabViewpager", viewController: TabViewPagerViewController.self)
+        manager.register(endPoint: "/status/bars", viewController: ExampleStoriesProgressBarsViewController.self)
+        manager.register(endPoint: "/status/screen", viewController: ExampleStoriesDownloadContentViewController.self)
+        manager.register(endPoint: "/status/screenbars", viewController: ExampleStoriesScreenBarsViewController.self)
+        manager.register(endPoint: "/status/screenbarsbuilder", viewController: ExampleStoriesWithBuilderViewController.self)
     }
 }

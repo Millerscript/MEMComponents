@@ -32,7 +32,7 @@ class TabItemCompouse: UIView, TabProtocol {
     
     required init(configuration: MCTabViewConfiguration) {
         self.configuration = configuration
-        tabItemTitle = TabItemTitle(type: .COMPOUSE, configuration: configuration).newSet()
+        tabItemTitle = TabItemTitle(type: .COMPOUSE, configuration: configuration)
         super.init(frame: CGRect())
         defaultSettings()
     }
@@ -42,8 +42,10 @@ class TabItemCompouse: UIView, TabProtocol {
                                                     itemSelectedBackground: .gray.withAlphaComponent(0.3),
                                                     fontColor: .black,
                                                     fontSelectedColor: .white)
-        tabItemTitle = TabItemTitle(type: .COMPOUSE, configuration: configuration).newSet()
+        tabItemTitle = TabItemTitle(type: .COMPOUSE, configuration: configuration)
         super.init(frame: CGRect())
+        
+        self.prepareForHooks()
         defaultSettings()
     }
     

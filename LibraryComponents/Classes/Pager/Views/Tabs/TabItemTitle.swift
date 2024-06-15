@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MEMBase
 
 internal class TabItemTitle: UIView {
     
@@ -20,7 +21,7 @@ internal class TabItemTitle: UIView {
     private var configuration: MCTabViewConfiguration
     
     private lazy var title: UILabel = {
-        let label = UILabel().newSet()
+        let label = UILabel.newSet()
         label.textColor = configuration.fontColor
         label.numberOfLines = 1
         label.textAlignment = .center
@@ -28,7 +29,7 @@ internal class TabItemTitle: UIView {
     }()
     
     private lazy var image: UIImageView = {
-        let image = UIImageView().newSet()
+        let image = UIImageView.newSet()
         image.contentMode = .scaleAspectFit
         image.clipsToBounds = true
         image.tintColor = configuration.fontColor
@@ -41,6 +42,7 @@ internal class TabItemTitle: UIView {
         self.configuration = configuration
         self.type = type
         super.init(frame: CGRect())
+        self.prepareForHooks()
         set()
     }
     
