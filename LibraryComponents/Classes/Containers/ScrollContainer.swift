@@ -35,12 +35,6 @@ open class ScrollContainer {
         return stackView
     }()
     
-    private let sampleView: UIView = {
-        let view = UIView.newSet()
-        view.backgroundColor = .brown
-        return view
-    }()
-    
     public lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView.newSet()
         scrollView.isScrollEnabled = true

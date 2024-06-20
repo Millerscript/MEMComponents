@@ -78,7 +78,9 @@ class ViewController: MEMBaseViewController {
     func setTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
         tableView.register(DeeplinkCell.self, forCellReuseIdentifier: Constants.cellIdentifier)
         
         self.view.addSubview(tableView)

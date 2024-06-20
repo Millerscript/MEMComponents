@@ -34,6 +34,8 @@ class DeeplinkCell: UITableViewCell {
     }
     
     private func setViews() {
+        self.clipsToBounds = true
+        self.layer.cornerRadius = 10
         self.backgroundColor = .lightGray.withAlphaComponent(0.2)
         self.selectionStyle = .none
         contentView.addSubview(titleLbl)

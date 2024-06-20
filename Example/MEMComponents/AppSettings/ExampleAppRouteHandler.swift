@@ -23,5 +23,7 @@ class ExampleAppRouteHandler: MEMBaseRouteHandlerProtocol {
         manager.register(endPoint: "/status/screen", viewController: ExampleStoriesDownloadContentViewController.self)
         manager.register(endPoint: "/status/screenbars", viewController: ExampleStoriesScreenBarsViewController.self)
         manager.register(endPoint: "/status/screenbarsbuilder", viewController: ExampleStoriesWithBuilderViewController.self)
+        manager.register(endPoint: "/nestedScrollContainer", viewController: NestedScrollContainerViewController.self)
+        manager.register(endPoint: "/fixedContainer", viewController: FixedContainerViewController.self)
     }
 }

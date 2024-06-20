@@ -1,0 +1,58 @@
+{
+    "app":"creators",
+    "header": {
+        "components":[
+            {
+                "type": "image",
+                "url":"",
+                "margins":{
+                    "top":"",
+                    "bottom":""
+                },
+                "dimesion": {
+                    "height":""
+                }
+            },
+            {
+                "type": "label",
+                "text": "This is going to be an awesome intro"
+            }
+        ]
+    },
+    "body": {
+        "components":[
+            {
+                "text": "With google",
+                "type": "button",
+                "type_action": "perform_third_party_login"
+            },
+            {
+                "text": "Or",
+                "type": "label"
+            },
+            {
+                "text": "Create an account",
+                "type": "button",
+                "type_action": "deeplink"
+            },
+            {
+                "text": "Read our",
+                "text_link": "terms and conditions",
+                "link": "",
+                "type": "link",
+                "type_action": "openLink"
+            }
+        ]
+    },
+    "footer": {
+        "components":[
+            {
+                "text": "Have an account already?",
+                "text_link": "Log in",
+                "link": "",
+                "type": "link",
+                "type_action": "deeplink"
+            }
+        ]
+    }
+}

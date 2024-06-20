@@ -17,9 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let deeplinksManager = MEMBaseDeeplinkManager.shared
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
         deeplinksManager.setHostManagers(list: ["example" : ExampleAppRouteHandler()])
-        
         window = navigation.getWindow(viewController: ViewController(data: ["message": "Hello"]))
         return true
     }
