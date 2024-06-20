@@ -51,9 +51,9 @@ class OnboardingHeaderView: MCBaseSectionView {
         titleLbl.sizeToFit()
         titleLbl.isUserInteractionEnabled = true
         // TODO: Update MEMBase then this is going to work
-        /*titleLbl.addTapGestureRecognizer {
+        titleLbl.addTapGestureRecognizer {
             print("Tapped text")
-        }*/
+        }
         
         self.add(view: titleLbl)
     }

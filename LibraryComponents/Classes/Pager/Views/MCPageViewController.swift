@@ -166,7 +166,7 @@ extension MCPageViewController: UIPageViewControllerDelegate {
             return 0
         }
         
-        guard let firstViewControllerIndex = pages.firstIndex(of: firstViewController) else {
+        guard let _ = pages.firstIndex(of: firstViewController) else {
             return 0
         }
 
