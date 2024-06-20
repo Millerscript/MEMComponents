@@ -46,5 +46,5 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'Kingfisher', '~> 7.0'
-  s.dependency 'MEMBase', '0.1.2'
+  s.dependency 'MEMBase', '0.1.3'
 end
